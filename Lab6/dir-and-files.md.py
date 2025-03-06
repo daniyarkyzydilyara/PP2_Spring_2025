@@ -71,14 +71,16 @@ for _ in file:
 
 print(cnt)
 
-#Write a Python program to count the number of lines in a text file.
-file = open('dilyara.txt', 'r')
+#Write a Python program to write a list to a file.
+list = ['Lee', 'Clementine', 'AJ', 'Kennie', 'Luke']
 
-cnt = 0
-for _ in file:
-    cnt+=1
+filename=input()
 
-print(cnt)
+with open(filename, "w") as f:
+    for x in list:
+        f.write(x + "\n")
+
+print("List was written to", filename)
 
 #Write a Python program to generate 26 text files named A.txt, B.txt, and so on up to Z.txt
 import string
